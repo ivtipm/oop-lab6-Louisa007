@@ -1,0 +1,48 @@
+﻿<Application x:Class="TrapeziumCalc_test1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TrapeziumCalc_test1"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <!--Такие же комментарии по использованию "стилей" я написал к 6й лабе Виты, 
+            если хочешь, удали их, или перепиши по другому, или оставь так,
+            тогда Ветров подумает, что тебе помогал не я, а Вита =) -->
+
+        <!--Стили будут применяться только к "чистым" объектам т.е.
+            если вы до этого уже определили для элемента шрифт,цвет фона и прочие свойства, 
+            то они переопределят эти же свойства стиля и они применены не будут-->
+
+        <!--"Безымянный" стиль, который сразу же будет применён ко всем объектам типа Button-->
+        <Style TargetType="Button">
+            <!--Тип элемента, для которого создаётся стиль (Это уже комментарии чисто к твоей лабе =) )-->
+            
+            <Setter Property="FontFamily" Value="Trajan Pro" />
+            <!--Шрифт кнопки - Trajan Pro -->
+            
+            <Setter Property="Background" Value="DarkOrchid" />
+            <!--Цвет кнопки - "Тёмная Орхидея" -->
+            
+            <Setter Property="Foreground" Value="White" />
+            <!--Цвет шрифта - Белый -->
+        </Style>
+
+        <!--"Именованный" стиль, который не применяется сразу ко всем элементам.
+        Чтобы его применить нужно в MainWindow.XAML в любом элементе Label написать код:
+        Style="{StaticResource Lbl_GillSansMT_LemonChiffon}"-->        
+        <Style x:Key="Lbl_GillSansMT_LemonChiffon" TargetType="Label">
+            <Setter Property="FontFamily" Value="Gill Sans MT" />
+            <Setter Property="Background" Value="LemonChiffon"/>
+        </Style>
+        
+        
+        <!--Стиль, который я не использовал. 
+            Можешь попробовать сама что-нибудь сделать по образцу
+            Или удалить-->
+        <Style x:Key="Lbl_TimesNewRoman_LightSkyBlueBackg" TargetType="Label">
+            <Setter Property="FontFamily" Value="Gill Sans MT" />
+            <Setter Property="Background" Value="LightSkyBlue"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
